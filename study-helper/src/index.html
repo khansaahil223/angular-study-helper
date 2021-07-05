@@ -12,5 +12,28 @@
 </head>
 <body class="mat-typography">
   <app-root></app-root>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyC--7vhilYHanhfnQAGyPOrArTTe4-x-cI",
+    authDomain: "angular-study-helper.firebaseapp.com",
+    projectId: "angular-study-helper",
+    storageBucket: "angular-study-helper.appspot.com",
+    messagingSenderId: "826900054407",
+    appId: "1:826900054407:web:d82834bdb420368ceb1322",
+    measurementId: "G-GFGRPQJW12"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 </html>

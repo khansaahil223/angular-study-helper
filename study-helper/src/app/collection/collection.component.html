@@ -20,7 +20,7 @@
             <div>Loop Cards</div>
         </div>        
     </div>    
-    <button class="collection-button" (click)="router.navigateByUrl('collection/edit/{{collection.id}}')" >Edit Collection</button>
+    <button class="collection-button" (click)="router.navigateByUrl('collection/edit/'+collection.id)" >Edit Collection</button>
 </div>
 <div class="collection" *ngIf="!collection">
     <h1 class="title"> Oops! Collection not found! </h1>
