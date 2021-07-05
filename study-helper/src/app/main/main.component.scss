@@ -1,0 +1,31 @@
+@use '../scss_modules/styles';
+
+$button-text-color:rgb(255, 255, 0);
+$button-color:brown;
+nav {
+    @include styles.flex-center;
+    width:100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin:50px 0px 30px;
+    a {
+        @include styles.flex-center;
+        text-decoration: none;
+        background:$button-color;
+        color:$button-text-color;
+        text-shadow: -1px -1px black;
+        width:150px;
+        height:50px;    
+        box-shadow: 0px 0px 10px rgb(151, 63, 63);    
+    }
+        
+    a:visited{
+        color:$button-text-color;
+    }
+
+    a:hover{
+        background-color: $button-text-color;
+        color:$button-color;
+        text-shadow: none;
+    }
+}

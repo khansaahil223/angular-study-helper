@@ -1,0 +1,14 @@
+@mixin flex-center{
+    display: flex;   
+    align-items: center;
+    justify-content: center;    
+}
+@mixin coverParentCompletely{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin sameWidthHeight($value){
+    width:$value;
+    height: $value;
+}
