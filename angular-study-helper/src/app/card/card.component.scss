@@ -1,0 +1,40 @@
+@use "sass:color";
+@use '../scss_modules/styles';
+
+$card-color:#fcbacd;
+$card-content-color:#a75656;
+
+$title-height:10%;
+
+.card{
+    @include styles.coverParentCompletely;
+    background-color: $card-color;
+    @include styles.flex-center;
+    flex-direction: column;
+    .card-close-button{
+
+    }
+    .card-title{
+        @include styles.flex-center;
+        height: $title-height;
+    }
+    .card-content{        
+        @include styles.flex-center;
+        font-size: large;
+        height: 100% - $title-height;
+        width: 100%;
+        background-color: $card-content-color;                
+    }
+    .card-front, .card-back{    
+        height: 90%;
+        width: 90%;
+        overflow: auto;
+        @include styles.flex-center;
+    }
+    .card-front{
+        background-color: #725151;
+    }
+    .card-back{
+        background-color: #9b0909;
+    }
+}

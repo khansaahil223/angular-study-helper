@@ -1,0 +1,8 @@
+<form (ngSubmit)="add()" class="card">
+    <h2>Add new card</h2>
+    <input [(ngModel)]="card.title" placeholder="Enter title" name="title" class="card-title"/>    
+    <textarea [(ngModel)]="card.front" placeholder="Enter front" name="front" class="card-front"></textarea>
+    <textarea [(ngModel)]="card.back" placeholder="Enter back" name="back" class="card-back"></textarea>
+    <p>{{errorText}}</p>
+    <button type="submit" class="submit-button">Add card</button>
+</form>

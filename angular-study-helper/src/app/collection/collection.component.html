@@ -1,0 +1,27 @@
+<div class="collection" *ngIf="collection">
+    <h1 class="title"> {{collection.title}} </h1>
+    <div *ngFor="let card of collection.cards; index as i; trackBy: collection.trackCardBy" class="cards-holder">
+        <div *ngIf="i===currentCard" class="card-holder">
+            <div class="nav-button" (click)='prevCard()'>
+                <mat-icon>west</mat-icon>
+            </div>
+            <div class="current-card">
+                <app-card [card]="card"></app-card>    
+            </div>
+            <div class="nav-button" (click)='nextCard()'>
+                <mat-icon>east</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="options">
+        <h3>Options</h3>
+        <div class="option">
+            <input type="checkbox" [(ngModel)]="loopCards"/>
+            <div>Loop Cards</div>
+        </div>        
+    </div>    
+    <button class="collection-button" (click)="router.navigateByUrl('collection/edit/'+collection.id)" >Edit Collection</button>
+</div>
+<div class="collection" *ngIf="!collection">
+    <h1 class="title"> Oops! Collection not found! </h1>
+</div>

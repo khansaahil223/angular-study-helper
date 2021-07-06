@@ -1,0 +1,87 @@
+@use '../scss_modules/styles';
+
+$card-height:70%;
+$card-width:70%;
+$card-size:500px;
+
+.collection{
+    @include styles.flex-center;
+    flex-direction: column;
+    margin-top:15px;
+}
+
+.title{
+    // @include styles.flex-center;
+    width: 90%;
+}
+
+.cards-holder{
+    @include styles.flex-center;    
+}
+
+.card-holder{
+    @include styles.flex-center; 
+    @include styles.sameWidthHeight($card-size);
+    justify-content: space-evenly;
+}
+
+.current-card{    
+    height: $card-height;
+    width: $card-width;
+}
+
+.nav-button{
+    @include styles.flex-center; 
+    width: 0.3 * (100%-$card-width);
+    user-select: none;
+    height: 7%;    
+}
+
+.nav-button:hover{
+    background-color: #fcadcf;
+}
+
+.options{
+    @include styles.flex-center;
+    flex-direction: column;
+    width: 0.8 * $card-size;
+    padding: 5px;
+    margin:4px;    
+    h3{
+        display: flex;
+        width: 100%;
+        padding: 10px;
+    }
+}
+$input-width:20%;
+.option{
+    @include styles.flex-center; 
+    justify-content: space-evenly;  
+    width: 100%; 
+    input{        
+        width: $input-width;
+    }
+    div{
+        display: flex;
+        width: 100% - $input-width;
+    }
+}
+
+$button-color:rgb(18, 128, 100);
+$button-text-color:rgb(203, 218, 195);
+.collection-button{    
+    width:250px;
+    height: 50px;
+    font-size: large;
+    font-weight: 800;
+    background: $button-color;
+    color:$button-text-color;
+    text-shadow: -1px 1px 2px black;
+    box-shadow: -1px 1px 3px #040616;
+    margin: 50px 0px 25px;
+}
+.collection-button:hover{
+    background: $button-text-color;
+    color:$button-color;
+    text-shadow: none;
+}

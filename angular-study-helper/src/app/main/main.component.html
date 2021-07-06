@@ -1,0 +1,7 @@
+<nav>
+    <ng-container *ngFor="let collection of collectionsService.collections">
+        <a href="/collection/{{collection.id}}">{{collection.title}}</a>
+    </ng-container>
+    <a href="/collection/add" class="add"> New collection</a>
+</nav>
+<router-outlet></router-outlet>

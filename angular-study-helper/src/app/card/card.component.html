@@ -1,0 +1,8 @@
+<div class="card" *ngIf="card && card!==null">
+    <!-- <div class="card-close-button" (click)="cardService.remove(card.id)">X</div> -->
+    <h1 class="card-title">{{ card.title }}</h1>
+    <div class="card-content" (click)="card.showFront=!card.showFront">
+        <p class="card-front" *ngIf="card.showFront">{{ card.front }}</p>
+        <p class="card-back" *ngIf="!card.showFront">{{ card.back }}</p>
+    </div>
+</div>

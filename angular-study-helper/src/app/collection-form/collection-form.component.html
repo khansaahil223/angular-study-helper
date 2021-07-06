@@ -1,0 +1,32 @@
+<div class="collection-form">
+    <div class="collection-form-form">
+        <div class="form">
+            <h2 class="heading">Add new collection</h2>
+            <div class="collection-input">    
+                <input [(ngModel)]="collection.title" placeholder="Enter collection title">    
+            </div>    
+            <div class="card-form">
+                <app-card-form (newCardEvent)="cardsService.add($event)" ></app-card-form>
+            </div>        
+            <div class="error-holder">
+                {{errorMessage}}
+            </div>        
+        </div>
+        <div class="cards" >        
+            <div class="card-holder" *ngFor="let card of cardsService.cards">
+                <div class="card">
+                    <app-card [card]="card"></app-card>
+                </div>
+                <div class="card-buttons">
+                    <button (click)="cardsService.remove(card.id)" class="card-button">X</button>
+                </div>            
+            </div>      
+                        
+        </div>
+        <div class="remove-all-button card-buttons">
+            <button class="collection-button" (click)="removeAllCards()">Remove All Cards</button>
+        </div>   
+    </div>
+    <button (click)="save()" class="collection-button">Save Collection</button>
+
+</div>
